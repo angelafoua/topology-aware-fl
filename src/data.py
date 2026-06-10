@@ -23,7 +23,7 @@ TASK_INFO: Dict[str, Dict] = {
 
 
 def load_glue(task: str) -> Tuple[Dataset, Dataset]:
-    ds = load_dataset("glue", task)
+    ds = load_dataset("nyu-mll/glue", task)
     train = ds["train"]
     val_split = TASK_INFO[task]["metric_split"]
     val = ds[val_split]
